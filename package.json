@@ -1,0 +1,28 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "An application presenting the weather in Poland over many years.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./run-tests.sh"
+  },
+  "keywords": [],
+  "author": "Marc Blank",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarooDev/ProjectWeather.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MarooDev/ProjectWeather/issues"
+  },
+  "homepage": "https://github.com/MarooDev/ProjectWeather#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.3.0",
+    "eslint": "^9.3.0",
+    "globals": "^15.3.0",
+    "typescript-eslint": "^8.0.0-alpha.24"
+  }
+}
+
+
