@@ -1,13 +1,24 @@
-import { browser } from "globals";
-import pluginJs from "@eslint/eslint-plugin";
-import tseslint from "@typescript-eslint/eslint-plugin";
+const { browser } = require("globals");
 
-export default {
+module.exports = {
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaVersion: 2023,
+    sourceType: "module",
+  },
   globals: {
-    browser
+    ...browser,
   },
   extends: [
-    "plugin:js/recommended",
-    "plugin:@typescript-eslint/recommended"
-  ]
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  plugins: [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  rules: {
+    "prettier/prettier": "error"
+  }
 };
