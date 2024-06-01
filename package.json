@@ -4,6 +4,10 @@
   "description": "An application presenting the weather in Poland over many years.",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "lint": "eslint 'src/**/*.ts'",
     "test": "./run-tests.sh"
   },
   "keywords": [],
