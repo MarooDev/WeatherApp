@@ -1,10 +1,13 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
-import tseslint from "typescript-eslint";
+import { browser } from "globals";
+import pluginJs from "@eslint/eslint-plugin";
+import tseslint from "@typescript-eslint/eslint-plugin";
 
-
-export default [
-  {languageOptions: { globals: globals.browser }},
-  pluginJs.configs.recommended,
-  ...tseslint.configs.recommended,
-];
+export default {
+  globals: {
+    browser
+  },
+  extends: [
+    "plugin:js/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ]
+};
